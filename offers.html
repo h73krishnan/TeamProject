@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    #mainhsp{
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+        #headerHP{
+            display:flex;
+        }
+        #headerHP>div{
+            margin-left:15px;   
+        }
+        #headerHP> .im{
+            padding-top:8px;
+        }
+        #h2HP{
+            color:#4f585E;
+        }
+        #cont{
+            /* border:1px solid black; */
+            display:flex;
+            margin:20px;
+        }
+        #cont>div{
+            height:100px;
+            display:flex;
+            border:1.5px solid #8b9eab;
+            border-radius:5px;
+            margin-right:20px;
+        }
+        img{
+            height:100%;
+            margin-left:10px;
+        }
+
+        #de{
+            height:auto;
+            /* border:2px solid red; */
+            margin-left:px;
+            display:flex;
+            flex-direction:column;
+            gap:0px;
+            align-items:center;
+            justify-content:flex-start;
+            line-height: 18px;
+            font-size: 20px;
+            color: #292e33;
+        }
+        #h5HP,#h6HP{
+            margin:0px;
+            width:80%;
+            /* border:1px solid green; */
+        }
+        #cont>div>div{
+            padding:20px 0px;
+            
+        }
+      
+    </style>
+    
+</head>
+
+<body>
+    <div id="mainhsp">
+    <div id="headerHP">
+        <div class="im"><img src="https://assets.pharmeasy.in/web-assets/dist/67890676.svg"/></div>
+        <div><h2 id="h2HP">Offers Just For You</h2></div>
+    </div>
+    <div id="cont">
+    </div>
+</div>
+</body>
+
+</html>
+<script>
+    var offers = [
+        { image: "https://cms-contents.pharmeasy.in/offer/f8bf7f78e45-25100.jpg?dim=60x0&dpr=1.25&q=100", descrip: "Get flat Rs.250 cashback on ICICI Debit & Credit cards", code: "Code: GRAND25" },
+        { image: "https://cms-contents.pharmeasy.in/offer/4db0adda6b1-40.jpg?dim=60x0&dpr=1.25&q=100", descrip: "Flat 20% off + 20% cashback on your 1st medicine order", code: "Code: PHEA20" },
+        { image: "https://cms-contents.pharmeasy.in/offer/6901b462e6d-icicinew.jpg?dim=60x0&dpr=1.25&q=100", descrip: "Get flat Rs.250 cashback on ICICI Debit & Credit cards", code: "No Code Required" },
+        { image: "https://cms-contents.pharmeasy.in/offer/8500c9729db-logo_PhonePe_PhonePe.png?dim=60x0&dpr=1.25&q=100", descrip: "Get up to Rs.750 cashback via PhonePe wallet only.", code: "No Code Required" },
+        
+    ]
+
+    offers.map(function (elem) {
+
+        var div1 = document.createElement("div");
+        
+        var div2 = document.createElement("div");
+        var div3 = document.createElement("div");
+        var div4 = document.createElement("div");
+        var des = document.createElement("div")
+        des.setAttribute("id","de");
+
+        var image = document.createElement("img");
+        image.src = elem.image;
+
+        var descrip = document.createElement("h6");
+        descrip.textContent = elem.descrip;
+        descrip.setAttribute("id","h6HP");
+
+        var code = document.createElement("h5");
+        code.textContent = elem.code;
+        code.setAttribute("id","h5HP");
+
+        
+
+        div2.append(image)
+        des.append(descrip,code)
+        div1.append(div2, des)
+
+        document.querySelector("#cont").append(div1);
+    })
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+    #container{
+        display:flex;
+    }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+var deals=[
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/A52432/dr-morepen-lemolate-gold-ayurvedic-cough-syrup-100ml-1-1641790547.jpg?dim=224x0&dpr=1.25&q=100",name1:"Dr. Morepen Lemolate Gold Ayurvedic Cough Syrup - 100ml",name2:"₹53.2"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/E54755/everherb-aloe-vera-juice-with-pulp-rejuvenates-skin-hair-1-litre-bottle-2-1643882394.jpg?dim=224x0&dpr=1.25&q=100",name1:"Everherb Aloe Vera Juice With Pulp - Rejuvenates Skin & Hair - 1 Litre Bottle",name2:"₹199"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/I41108/horlicks-protein-plus-chocolate-container-400-g-2-1643880294.jpg?dim=224x0&dpr=1.25&q=100",name1:"Horlicks Protein Plus Chocolate Container, 400 G",name2:"₹484"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/Z08747/bold-care-vibe-premium-chocolate-flavour-2-1641795141.jpg?dim=224x0&dpr=1.25&q=100",name1:"Bold Care Vibe- Premium Chocolate Flavour",name2:"₹357"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/R03472/pharmeasy-diabetic-orthopedic-men-slippers-fahion-range-4-brown-color-size-11-1-1641552703.jpg?dim=224x0&dpr=1.25&q=100",name1:"Pharmeasy Diabetic & Orthopedic Men Slippers (Fahion Range-4) Brown Color, Size 11",name2:"₹649.5"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/I20421/sebamed-baby-body-milk-100ml-2-1641788018.jpg?dim=224x0&dpr=1.25&q=100",name1:"Sebamed Baby Body Milk - 100ml",name2:"₹425.58"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/Z74358/sandpuppy-zest-new-5-in-1-heating-pad-for-pain-relief-best-for-hands-and-legs-knee-elbow-and-ankle-1-1641789744.jpg?dim=224x0&dpr=1.25&q=100",name1:"Sandpuppy Zest - New 5 In 1 Heating Pad For Pain Relief Best For Hands And Legs Knee Elbow And Ankle",name2:"₹1699.15"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/T37432/mothersparshayurvedic-baby-massage-oil-100ml-3-1642064799.jpg?dim=224x0&dpr=1.25&q=100",name1:"Mother Sparsh Ayurvedic Baby Massage Oil-100ml",name2:"MRP ₹399"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/G61582/tnw-the-natural-wash-lip-serum-for-soft-supple-lips-10-ml-2-1641794404.jpg?dim=224x0&dpr=1.25&q=100",name1:"Tnw The Natural Wash Lip Serum For Soft & Supple Lips - 10 Ml",name2:"MRP ₹420"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/C34354/ciphands-hand-sanitizer-bottle-of-100-ml-2-1641789437.jpg?dim=224x0&dpr=1.25&q=100",name1:"Ciphands Hand Sanitizer Bottle Of 100 Ml",name2:"MRP ₹420"},
+    {image:"https://cdn01.pharmeasy.in/dam/products_otc/A88004/tedibar-baby-bodywash-250ml-2-1641791095.jpg?dim=224x0&dpr=1.25&q=100",name1:"Tedibar Baby Bodywash - 250ml",name2:"₹450"}
+]
+
+deals.map(function(elem){
+    var div1=document.createElement("div");
+    
+    var  image=document.createElement("img");
+    image.src=elem.image;
+
+    var head1=document.createElement("h3");
+    head1.textContent=elem.name1;
+
+    var head2=document.createElement("h4");
+    head2.textContent=elem.name2;
+
+    div1.append(image,head1,head2);
+
+    document.querySelector("#container ").append(div1);
+
+})
+
+</script>
