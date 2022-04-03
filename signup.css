@@ -1,0 +1,133 @@
+#viewmore{
+    height: 800px;
+    width: 40%;
+    position: absolute;
+    background-color: white;
+    transition: 0.5s;
+    right: 0;
+    /* margin-top: -180px; */
+}
+#viewmore>.view{
+    height: 400px;
+    width: 100%;
+    border: 1px;
+    margin-left: 100px;
+
+}
+#viewmore>.view>h5{
+    margin-top: 20px;
+    
+}
+#viewmore>.close{
+    height: 70px;
+    width: 70px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+    
+}
+.serchboxes{
+    border: 1px solid ;
+}
+
+#head>div{
+    height: 70%;
+    width: 20%;
+    border: 0.5px;
+}
+#head>div>p{
+   
+   font-family: sans-serif;
+   font-style: normal;
+   font-weight: 400px;
+   font-size: 14px;
+   line-height: 18px;
+   color: #4f585e;
+   padding-left: 160px;
+   padding-top: 15px;
+   
+}
+
+#filter>.b2>.green{
+    color: #1f847e;
+    font-size: 16px;
+}
+.green:hover{
+    cursor: pointer;
+    color: #6feee5;
+}
+
+
+    .xicon{
+        color: #f2f5f7;
+        font-size: 30px;
+    
+        
+    }
+    .topBo{
+        height: 90px;
+        width: 100%;
+        /* border: 1px solid; */
+        margin-top: 100px;
+        background-color: #1f847e;
+        display: flex;
+        justify-content: space-around;
+    }
+     .topBo>img{
+         height: 50px;
+         width: 180px;
+         margin-top: 20px;
+         
+     }
+
+     .close{
+        height: 70px;
+        width: 70px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        /* margin-top: 150px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        /* margin-left: -60px; */
+        
+        
+    }
+    .close:hover{
+        cursor: pointer;
+    }
+
+    #signupForm{
+        margin-top: -120px;
+        margin-left: 100px;
+    }
+    label{
+        line-height: 25px;
+        font-family: sans-serif;
+         font-style: normal;
+         font-weight: 600px;
+         font-size: 24px;
+         line-height: 17px;
+         color: #4f585e;
+    }
+    input{
+        padding: 10px 45px 10px 45px;
+        border-radius: 7px;
+        border: 0.5px solid rgb(77, 75, 75);
+        margin-top: 10px;
+    }
+    #otpp{
+        border-radius: 7px;
+        color: white;
+        background-color: #1f847e;
+        border: none;
+    }
+    #otpp:hover{
+        cursor: pointer;
+        background-color: #0f4d48;
+        font-family: sans-serif;
+    }
