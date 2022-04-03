@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmEasy:Online Pharmacy & Medicine</title>
+    <link rel="stylesheet" href="cart.css">
+
+    <style>
+        *{
+    font-family: "Open Sans", sans-serif;
+}
+
+#headerbox{
+    background: #10847e;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
+    user-select: none;
+    padding: 15px 0;
+    transition: all .3s;
+}
+
+#headerbox>div{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    /* border: 1px solid yellow; */
+    height: 90%;
+    justify-content: space-evenly;
+}
+#headerbox>div>a{
+    margin-right: 50px;
+    margin-left: 60px;
+}
+
+#headerbox>div>a img{
+    width: 180px;
+    height: 50px;
+}
+#headerbox>div>div{
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid pink; */
+}
+
+.headdiv{
+    height: 100%;
+    width: 100%;
+}
+.headdiv>div:first-child{
+    /* border: 1px solid red; */
+    height: 60%;
+    margin-bottom: 15px;
+}
+.headdiv>div:last-child{
+    /* border: 1px solid blue; */
+    height:40%
+}
+#serchboxes{
+    display: flex;
+    /* border: 1px solid yellow; */
+}
+
+#serchboxes>div{
+    display: flex;
+    width: 800px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#serchboxes>div>div:first-child{
+    margin-left: 20px;
+    color: #139992;
+    font-weight: 700;
+}
+
+#serchboxes>div>div:nth-child(2){
+    color: gray;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-left: 1px solid gray;
+}
+
+#btmpart{
+    width: 100%;
+    height: 40%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+}
+.headdiv a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+#btmpart>div:first-child{
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+    margin-left: -20px;
+}
+#btmpart>div:first-child a:hover{
+    border-bottom: 2px solid white;
+}
+#btmpart>div:last-child div:hover{
+    border-bottom: 2px solid white;
+}
+#btmpart>div:last-child{
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+
+    margin-left: 5px;
+    justify-content: space-around;
+    color: white;
+}
+        #containerSKK{
+            height: auto;
+            width: 40%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            /* display: flex; */
+            border-radius: 10px;
+            padding: 100px;
+            margin-top: 20px;
+            margin-left: 100px;
+            margin: auto;
+        
+        }
+        #containerSKK a{
+            margin-left: 400px;
+            margin-top: 200px;
+        }
+        .boxI{
+            height: 100%;
+            width: 30%;           
+        }
+        .boxI>img{
+            height: 100px;
+            width: 100px;
+            margin-left: 50px;
+            margin-top: 40px;
+            /* border: 1px solid; */
+        }
+        .boxW{
+            height: 100%;
+            width: 70%;
+            /* border:solid green; */
+        }
+        h5{
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 20px;
+            line-height: 25px;
+            color: #4f585e; 
+          
+
+        }
+        .stp{
+            margin-left: 420px;
+            margin-top: -50px;
+            text-decoration: line-through;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 400px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #4f585e;
+            
+        }
+        .pcs{
+            margin-left: 420px;
+            margin-top: -15px;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 20px;
+            line-height: 25px;
+            color: #2e3031; 
+        }
+        .persof{
+            margin-left: 440px;
+            margin-top: -20px;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 10px;
+            line-height: 13px;
+            color: white;
+            
+        }
+        .pinkTag{
+            margin-left: 430px;
+            border-radius: 5px;
+        }
+        .mrpS{
+            margin-left: 382px;
+            margin-top: -63px;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 400px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #4f585e;
+        }
+        .calci{
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 400px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #737b80;
+        }
+        .pie{
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 600px;
+            font-size: 16px;
+            line-height: 20px;
+            color: teal; 
+            font-weight: bold;
+        }
+        .remove{
+            height: 30px;
+            width: 150px ;
+            border: none;
+            color: white;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 20px;
+            line-height: 25px;
+            border-radius: 5px;
+            background-color: #f47778;
+        }
+        .cardDetail{
+            margin-top: 120px;
+            margin-left: 80px;
+            height: 40px;
+            width: 200px ;
+            border: none;
+            color: white;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 20px;
+            line-height: 25px;
+            border-radius: 5px;
+            background-color: #10847e;
+
+        }
+        #priceSk{
+   
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 20px;
+            line-height: 25px;
+            color: #4f585e;margin-left: 350px;
+        }
+
+        #card{
+            margin-left: 600px;
+        }
+
+
+        #footer{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid black; */
+        background-color: #f4f7fb;
+        margin-top: 20px;   
+        padding: 10px;
+        
+    }
+
+    #footertext{
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin: auto;
+        /* border: 1px solid blue; */
+        justify-content: space-between;
+        flex-flow: row wrap;
+        margin-bottom: 140px;
+    
+        /* flex-direction: column; */
+    }
+    #footertext>div{
+        width: 22%;
+        height: auto;
+        /* border: 1px solid greenyellow; */
+        line-height: 15px;
+        color: rgb(104, 103, 103);
+        cursor: pointer;
+        
+    }
+    #partners{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin: auto;
+        cursor: pointer;
+    }
+    #follow{
+        display: flex;
+       
+     }
+    #follow>div{
+        margin: auto;
+    }
+    #follow i{
+        color: #356361;
+    }
+    #follow h3{
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #follow p{
+        font-size: 10px;
+        cursor: pointer;
+    }
+    #partners{
+        display: flex;
+    }
+    #partners img{
+        width: 40px;
+        height:30px;
+        margin-right: 15px;
+    }
+    #partnersheading{
+        width: 90%;
+        margin: auto;
+        /* border: 1px solid green; */
+    }
+    #partnersheading>h3{
+        color: #454c52;
+    }
+          /* ak  */
+          #sminfobox{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    /* border: 1px solid black; */
+}
+#sminfobox>div{
+    margin: auto;
+    /* border: 1px solid red; */
+}
+h2{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #686a6b;
+}
+span{
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 25px;
+    color: #677a89;
+}
+div>ul>li{
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 35px;
+    color:#677a89;
+    padding-left: 10px;
+}
+ul{
+    list-style: none;
+}
+ul li::before{
+    content: "\2022";
+    color: #3bb899;
+    display: inline-block;
+    width: 20px;
+    margin-left: -40px;
+
+}
+/* summit  */
+#scontainer{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    justify-content: space-around;
+  
+}
+#sli{
+    list-style-type: none;
+    line-height: 35px;
+    font-family: sans-serif;
+    cursor: pointer;
+    color:#6b7982;
+}
+#sh3{
+    font-family: sans-serif;
+    color: #4f585E;
+}
+#spay{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 85%;
+    padding-bottom: 30px;
+}
+#simg{
+    height: 30px;
+    width: 40px;
+    padding: 15px 15px 0px 0px;
+    margin: auto;
+}
+#spartners>#spartnersh3{
+    width: 85%;
+    display: flex;
+    margin: auto;
+    padding-top: 30px;
+    font-family: sans-serif;
+    color: #4f585e;
+}
+#ssymbol>#sspan{
+  color: teal;
+  /* gap: 30%; */
+  cursor: pointer;
+}
+#player{
+    background-color: #f4f7fb;
+    padding-top: 50px;
+    /* margin-top: 50px; */
+}
+
+
+#smcontainer{
+    margin: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    height: 270px;
+    width: 800px;
+    margin-top: 70px;
+    padding-bottom: 50px;
+
+}
+#smcontainer>#smdiv{
+    /* border: 1px solid red; */
+    /* display: flex; */
+    width: 25%;
+    margin: auto;
+    /* align-items: center; */
+    height: 300px;
+}
+#smcontainer>#smdiv>#smimg{
+    width: 50px;
+    height: 50px;
+    margin-left: 0px;
+}
+#smp{
+    line-height: 25px;
+    font-family: sans-serif;
+    color: #8897a2;
+}
+#smh3{
+    font-family: sans-serif;
+    color: #4f585E;
+}
+#smbox{
+    height: 600px;
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 20px;
+    margin-right: 100px;
+}
+#smboximg{
+    width: 210px;
+    height: 420px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+#smbox2{
+    height: 400px;
+    width: 50%;
+    /* border: 1px solid red; */
+    margin-top: 50px;
+    /* display: flex; */
+}
+#smnamebox{
+    height: 50px;
+    width: 600px;
+    /* border: 1px solid black; */
+    /* padding: 15px; */
+    padding-left: 100px;
+}
+#smnamebox>#smnameboxh3{
+    font-family: sans-serif;
+    color: rgb(94, 92, 92);
+    font-weight: normal;
+    
+}
+#smoptbox
+{
+    height: 90px;
+    width: 600px;
+    /* border: 1px solid turquoise; */
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    padding-left: 100px;
+
+}
+#smoptbox>#smopt1
+{
+    height:40px;
+    width: 170px;
+    /* border: 1px solid blue; */
+    gap: 15px;
+    background-color: #586166;
+    color: beige;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-top: -20px;
+}
+#smoptbox>#smopt1:hover{
+    background-color: rgb(44, 40, 40);
+    cursor: pointer;
+}
+#smopt1{
+    padding-top: 15px;
+    display: flex;
+}
+#smopt1>#smspan{
+    height: 10px;
+    width: 10px;
+}
+#smopt1>#smoptp{
+    color: black;
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    color: white;
+}
+#smspan{
+    color: white;
+    margin-bottom: -20px;
+    padding-bottom: 10px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="headerbox">
+        <div>
+            <a href="index.html">
+                <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+            </a>
+            <div class="headdiv">
+                <div id="serchboxes">
+                    <div> 
+                        <div>Select Pincode <span><i class="fa-solid fa-caret-down"></i></span></div>
+                        <div>
+                            Search medicines/Healthcare products @18% Off</div>
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="btmpart">
+                    <div>
+                        <div>
+                            <a href="product.html">Order Medicines</a>
+                        </div>
+                        <div>
+                            <a href="healthcarePage.html">Healthcare Products</a>
+                        </div>
+                        <div>
+                            <a href="labtest.html">Lab Tests</a>
+                        </div>
+                      
+                    </div>
+                    <div>
+                        <!-- <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><a href="">Offers</a></div> -->
+                        <div>
+                            <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""><a href="">User</a>
+                        </div>
+                        <div>
+                            <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">
+                            <a href="checkout.html">Cart</a>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+    
+        </div>
+    </div>
+    <a href="" id="card"></a>
+    <!-- <h1>Checkout</h1> -->
+    <h3 id="priceSk">
+    </h3>
+
+    <div id="containerSKK">
+        <!-- <a href="" id="card"></a> -->
+        <!-- <div>
+            
+        </div> -->
+    </div>
+    <div id="sminfobox">
+        <div>
+            <h2>Shop Safely And Worry-Free On PharmEasy</h2>
+            <span>PharmEasy is a renowned name in the online shopping of Over The Counter or healthcare products and other daily essentials. Ordering online on PharmEasy is convenient, fast and hassle-free; you can avoid the annoyance of queuing up at your local pharmacy and also avail of huge discounts of up to 80% OFF. Purchasing the healthcare requirements such as medical devices and nutritional supplements that you need will no longer burn a hole in your pocket. At PharmEasy, you are sure to find everything that you need because we have products across all healthcare categories.</span>
+        </div>
+        <div>
+            <h2>Why choose PharmEasy?</h2>
+            <ul>
+                <li>8400+ Brands</li>
+                <li>35K products in our stock</li>
+                <li>Delivery to 22000+ pin codes</li>
+                <li>Delivered to 50 lakh+ families</li>
+                <li>Over 2M customers served</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Our most popular categories:</h2>
+            <span>We have a range of categories and products, some which are:</span>
+        </div>
+        <div>
+            <h2>Devices</h2>
+            <span>With the pandemic upending our lives, we have all realized that there are some medical devices that we need to keep in our homes such as Oximeter, Thermometer, Inhaler, Blood pressure monitor, Glucometer.</span>
+        </div>
+        <div>
+            <h2>Personal care</h2>
+            <span>Personal care products can include a wide range of products such as Bath products, , Skincare essentials, Razor blades, Toothpaste and toothbrush, Wet wipes, Lip balm, Face masks, Hand sanitizer, etc.
+            </span>
+        </div>
+        <div>
+            <h2>Nutrition and fitness supplements
+            </h2>
+            <span>To give your health a helping hand, you can order a wide variety of health supplements including Health drinks, Nutritional powder, Nutrition tablets/capsules.
+            </span>
+        </div>
+        <div>
+            <h2>Ayurvedic care
+            </h2>
+            <span>Place your trust in the goodness of natural and organic ayurvedic products for an all-around healthy mind and body. There’s plenty to choose from such as Aloe vera juice, Moringa capsules, Garlic capsules.
+            </span>
+        </div>
+        <div>
+            <h2>Home care
+            </h2>
+            <span>Home care products are things you need every day such as disinfectant spray, phenyl, dishwashing liquid, etc. Get them all at spectacular discounts on PharmEasy.
+            </span>
+        </div>
+        <div>
+            <h2>Baby and mom care
+            </h2>
+            <span>PharmEasy also has an impressive range of baby and mom care products including Diapers, Baby bath products, Infant formula food, Mother’s health drinks, Diaper rash creams, Baby wipes.
+            </span>
+        </div>
+        <div>
+            <h2>Our top brands:
+            </h2>
+            <span>Get products from the most famous and trusted brands including Accu-chek, Dettol, Horlicks, Baidyanath, Sebamed.
+            </span>
+        </div>
+        <div>
+            <h2>You are safe with PharmEasy:
+            </h2>
+            <span>Given the times, we are taking all precautions to ensure that we keep everyone safe - our customers and the people we work with.
+            </span>
+        </div>
+        <div>
+            <h2>We ensure
+            </h2>
+            <ul>
+                <li>Regular sanitization of our premises and warehouses
+                </li>
+                <li>Temperature checks of our employees and delivery partners
+                </li>
+                <li>No-contact door-step delivery
+                </li>
+                <li>Sanitized packaging
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>Youe safety is our priority
+            </h2>
+            <span>Stay safe at home and shop at your convenience from PharmEasy. All you have to do is place your order and we will try to deliver it at the earliest.
+            </span>
+        </div>
+      </div>
+      <!-- sumeet  -->
+      <hr>
+      <div id="smcontainer">
+      <div id="smdiv">
+      <img id="smimg" src="https://pharmeasy.in/_next/image?url=%2Ficons%2FgenuineMedicine.svg&w=64&q=75"/>
+      <h3 id="smh3">1 Lakh+ Products</h3>
+      <p id="smp">We maintain strict quality controls on all our partner retailers, so that you always get standard quality products.</p>
+      </div>
+      <div id="smdiv">
+      <img id="smimg" src="https://pharmeasy.in/_next/image?url=%2Ficons%2FsecurePayment.svg&w=64&q=75"/>
+      <h3 id="smh3">Secure Payment</h3>
+      <p id="smp">100% secure and trusted payment protection</p>
+      </div>
+      <div id="smdiv">
+      <img id="smimg" src="https://pharmeasy.in/_next/image?url=%2Ficons%2FeasyReturn.svg&w=64&q=75"/>
+      <h3 id="smh3">Easy Return</h3>
+      <p id="smp">We have a new and dynamic return window policy for medicines and healthcare items. Refer FAQs section for more details.</p>
+      </div>
+      </div>
+      <hr>
+      
+      <div id="smbox">
+      <div><img id="smboximg" src="https://assets.pharmeasy.in/web-assets/dist/34a16ae8.jpg"/></div>
+      <div id="smbox2">
+      <div id="smnamebox"><h3 id="smnameboxh3">Download the App for Free</h3>
+      </div>
+      <div id="smoptbox">
+        <div id="smopt1"><span id="smspan"><i class="fa-brands fa-google-play fa-2x"></i></span><p id="smoptp">Google Pay</p></div>
+        <div id="smopt1"><span id="smspan"><i class="fa-brands fa-apple fa-2x"></i></span><p id="smoptp">App Store</p></div>
+      </div>
+      </div>
+      </div>
+      
+      <!-- akk  -->
+      
+      
+      
+          <div id="footer">
+            <div id="footertext">
+                <div>
+                    <h3>Company</h3>
+                    <p>About Us</p>
+                    <p>Careers</p>
+                    <p>Blog</p>
+                    <p>Partner with PharmEasy</p>
+                    <p>Sell at PharmEasy</p>
+                    <h3>Our Services</h3>
+                    <p>Order Medicine</p>
+                    <p>Healthcare Products</p>
+                    <p>Lab Tests</p>
+                </div>
+                <div>
+                    <h3>Featured Categories</h3>
+                    <p>Personal Care</p>
+                    <p>Health Food and Drinks</p>
+                    <p>Skin Care</p>
+                    <p>Home Care</p>
+                    <p>Ayurvedic Care</p>
+                    <p>Sexual Wellness</p>
+                    <p>Fitness & Supplements</p>
+                    <p>Mother and Baby Care</p>
+                    <p>Healthcare Devices</p>
+                    <p>Surgicals and Dressings</p>
+                    <p>Covid Essentials</p>
+                    <p>Health Condition</p>
+                    <p>Diabetic Care</p>
+                    <p>Elderly Care</p>
+                    <p>Accessories And Wearables</p>
+                    <p>Pet Care</p>
+                </div>
+                <div>
+                    <h3>Need help</h3>
+                    <p>Browse All Medicines</p>
+                    <p>Browse All Molecules</p>
+                    <p>Browse All Cities & Areas</p>
+                    <p>FAQs</p>
+                    <h3>Policy Info</h3>
+                    <p>Editorial Policy</p>
+                    <p>Privacy Policy</p>
+                    <p>Vulnerability Disclosure Policy</p>
+                    <p>Terms and Conditions</p>
+                    <p>Customer Support Policy</p>
+                    <p>Return Policy</p>
+                </div>
+                <div>
+                    <h3>FOLLOW US</h3>
+                    <div  id="follow">
+                     <span style="padding-right: 15px"><i class="fa-brands fa-instagram-square fa-2x"></i></span>
+                     <span style="padding-right: 15px"><i class="fa-brands fa-facebook fa-2x"></i></span>
+                     <span style="padding-right: 15px"><i class="fa-brands fa-youtube-square fa-2x"></i></span>
+                     <span style="padding-right: 15px"><i class="fa-brands fa-twitter-square fa-2x"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div id="partnersheading">
+             <h3>Our Payment Partners</h3>
+             <div id="partners">
+                <div> <img src="https://assets.pharmeasy.in/web-assets/dist/af0c6812.svg" alt=""> </div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/0e010044.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/1066bb1f.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/3a1a533d.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/fbea1701.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/4733a49d.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/b278e536.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/0aca2077.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/44a51ca5.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/d058b00d.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/e9445364.svg" alt=""></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/6e09c713.svg" alt=""></div>
+            </div>
+            
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    //don't need elem and function
+    var a = document.querySelector("#card");
+    a.href =  "cardDetail.html";
+
+    var btn = document.createElement("button");
+    btn.innerText = "Proceed to Buy"
+    a.append(btn);
+    btn.setAttribute("class", "cardDetail")
+
+    var choosenCart = JSON.parse(localStorage.getItem("cart"));
+    console.log(choosenCart);
+
+    //finding total
+    var total = choosenCart.map(function (elem){
+        var value = elem.price;
+        var valueChar = value.split("");
+        // console.log(valueChar);
+        var num = valueChar.splice(1).join("");
+        var num2 = Number(num);
+        // console.log(valueChar.splice(2).join(""));
+        // console.log(Number(num));
+        return num2
+    }).reduce(function(sum, num2, i, arr) {
+        return sum + num2
+    },0);
+    console.log(total);
+
+    localStorage.setItem("total", JSON.stringify(total));
+    var length = choosenCart.length;
+    
+    document.querySelector("#priceSk").innerHTML = `Number of items: ${length} and total price: ${total}`;
+
+    choosenCart.map(function (elem, index){
+        var boxI = document.createElement("div");
+        boxI.setAttribute("class", "boxI")
+         
+
+        var img = document.createElement("img");
+        img.src = elem.image;
+        
+        var boxW = document.createElement("div");
+        boxW.setAttribute("class", "boxImg")
+
+        var name = document.createElement("h5");
+        name.textContent = elem.name;
+
+        var imgT = document.createElement("img");
+         imgT.src = elem.offimg;
+         imgT.setAttribute("class","pinkTag");
+
+        var calci = document.createElement("p");
+        calci.textContent = "By CALCIMAX";
+        calci.setAttribute("class", "calci");
+
+        var piece = document.createElement("p");
+        piece.textContent = "30 Piece(s) in Box";
+        piece.setAttribute("class", "pie")
+         
+        var pers = document.createElement("p");
+        pers.innerText = elem.per;
+        pers.setAttribute("class","persof");
+
+        var stprices = document.createElement("p");
+        stprices.innerText = elem.stprice;
+        stprices.setAttribute("class","stp");
+
+        var price = document.createElement("p");
+        price.textContent = elem.price;
+        price.setAttribute("class","pcs");
+
+        var mrp = document.createElement("p");
+        mrp.innerText = elem.mrp;
+        mrp.setAttribute("class","mrpS");
+        
+        var remove = document.createElement("button");
+        remove.textContent = "Remove";
+        remove.setAttribute("class", "remove")
+
+        remove.addEventListener("click", function(){
+            removeFunction(elem, index);
+        })
+
+        boxI.append(img);
+        boxW.append(imgT,pers,name,calci,piece,remove,stprices, price,mrp)
+
+        document.querySelector("#containerSKK").append(boxI,boxW);
+    });
+    function removeFunction(elem, index){
+        console.log(elem);
+        choosenCart.splice(index, 1);
+        console.log(choosenCart);
+        localStorage.setItem("cart",JSON.stringify(choosenCart));
+        window.location.reload();
+    }
+
+    function goEnterCard(elem, index){
+        var cardDetails = [];
+        localStorage.setItem("cardDetails", JSON.stringify(cardDetails));
+        window.location.href="cardDetail.html";
+    }
+</script>
