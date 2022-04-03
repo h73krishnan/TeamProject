@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmEasy:Online Pharmacy & Medicine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&family=Tinos&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/angle-right?s=solid">
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body class="stopscroll">
+    <!-- stopsscroll 100% is the problem -->
+    <!-- header -->
+    <div id="headerbox">
+        <div>
+            <a href="signup.html">
+                <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+            </a>
+            <div class="headdiv">
+                <div id="serchboxes">
+                    <div> 
+                        <div>Select Pincode <span><i class="fa-solid fa-caret-down"></i></span></div>
+                        <div>
+                            Search medicines/Healthcare products @18% Off</div>
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="btmpart">
+                    <div>
+                        <div>
+                            <a href="">Order Medicines</a>
+                        </div>
+                        <div>
+                            <a href="">Healthcare Products</a>
+                        </div>
+                        <div>
+                            <a href="">Lab Tests</a>
+                        </div>
+                        <!-- <div>
+                            <a href="">RTPCR</a>
+                        </div> -->
+                    </div>
+                    <div>
+                        <!-- <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><a href="">Offers</a></div> -->
+                        <div>
+                            <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""><span class="green">Login/Signup</span>
+                        </div>
+                        <div>
+                            <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">
+                            <a href="checkout.html">Cart</a>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+
+    <!-- div just for some content -->
+
+    <div id="viewmore">
+        <div class="topBo">
+            <div class="close"><i class="fa-solid fa-xmark xicon"></i></div>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+        </div>
+       
+        <div class="viewSignup">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <form id="signupForm">
+                <label for="">Phone number</label>
+                <br />
+                <input type="text" placeholder="Enter phone number" id="phone">
+                <br />
+                <br />
+                <label for=""> OTP </label>
+                <br />
+                <input type="text" placeholder="Enter OTP" id="otp">
+                <br />
+                <br />
+                <input id="otpp" type="submit" value="Sign Up" onclick="signupFun()" />
+                <!-- <a href="persCare.html"><button type="button">Personal Care</button></a> -->
+            </form>
+        </div>
+       
+    </div>
+
+    <!-- <div>
+        <h5 class="green">View More</h5>
+    </div> -->
+    
+<!-- footer -->
+
+
+
+
+<div id="body">
+<div class="slider">
+    <div class="slides">
+        <input type="radio" name="rad-btn" id="radio1">
+        <input type="radio" name="rad-btn" id="radio2">
+        <input type="radio" name="rad-btn" id="radio3">
+        <input type="radio" name="rad-btn" id="radio4">
+        <input type="radio" name="rad-btn" id="radio5">
+        <input type="radio" name="rad-btn" id="radio6">
+
+        <div class="slide first">
+            <img src="/img/img31.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="/img/img21.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="/img/img1.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="/img/img4.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="/img/img5.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="/img/img6.jpg" alt="">
+        </div>
+
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+            <div class="auto-btn5"></div>
+            <div class="auto-btn6"></div>
+        </div>
+    </div>
+    <div class="nav-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+        <label for="radio5" class="manual-btn"></label>
+        <label for="radio6" class="manual-btn"></label>
+    </div>
+
+</div>
+</div>
+
+<!-- himanshu -->
+
+<div id="maincont">
+    <div id="cont1">
+        <div id="">
+           <img id="emage" src="https://assets.pharmeasy.in/web-assets/dist/1602b4ce.svg" />
+           <p id="merg">FLAT 20% OFF</p>
+          <div id="shift">
+           <div id="n1"><h4>Order Medicines</h1></div>
+           <div ><button id="btn1">Order Now</button></div>
+          </div>
+        </div>
+       <div id="m2"><img src="https://assets.pharmeasy.in/web-assets/dist/7c645a8d.png?dim=186x0&dpr=1.25&q=100"/></div>
+    </div>
+    <div id="cont2">
+        <div >
+           <img id="emage2" src="https://assets.pharmeasy.in/web-assets/dist/1602b4ce.svg" />
+           <p id="merg2">FLAT 20% OFF</p>
+          <div id="shift2">
+           <div id="n2"><h4>Healthcare Products</h1></div>
+           <div><button id="btn2">Order Now</button></div>
+          </div>
+        </div>
+       <div id="m2"><img src="https://assets.pharmeasy.in/web-assets/dist/c7c7095b.png?dim=186x0&dpr=1.25&q=100"/></div>
+    </div>
+    <div id="cont3">
+        <div id="">
+           <img id="emage3" src="https://assets.pharmeasy.in/web-assets/dist/1602b4ce.svg" />
+           <p id="merg3">FLAT 70% OFF</p>
+          <div id="shift3">
+           <div id="n3"><h4>Lab Tests</h1></div>
+           <div ><button id="btn3">Order Now</button></div>
+          </div>
+        </div>
+       <div id="m2"><img src="https://assets.pharmeasy.in/web-assets/dist/e1d3ac1c.png?dim=186x0&dpr=1.25&q=100"/></div>
+    </div>
+</div>
+<!-- himanshu  -->
+
+
+<div id="upperposterbox">
+    <div class="div1">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/e3db129c.png" alt="">
+    </div>
+    <div class="div2">Save flat 5% extra on medicines & enjoy FREE delivery</div>
+    <div class="div3">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/b20b0932.png" alt="">
+    </div>
+</div>
+<div>
+    <!-- himanshu  -->
+    <div id="mainhsp">
+        <div id="headerHP">
+            <div class="im"><img src="https://assets.pharmeasy.in/web-assets/dist/67890676.svg"/></div>
+            <div><h2 id="h2HP">Offers Just For You</h2></div>
+        </div>
+        <div id="conthp">
+        </div>
+    </div>
+    <!-- himanshu  -->
+
+    <div id="featuredhsp">
+        <h2>Featured Brands</h2>
+        <div id="conhsp">
+        </div>
+    </div>  
+<!-- sathan -->
+  
+<!-- sathan  -->
+
+<div id="hamainbox">
+        <div><h2>Health Articles</h2></div>
+        <div id="hainsidemain">
+            <div>
+                <img src="https://blog-images.pharmeasy.in/2022/03/28145625/breastfeeding.jpg?dim=0x230&dpr=1.25&q=100" alt="">
+                <div class="hadiv1">
+                    Best Breastmilk Foods: How To Make Breast Milk Tasty For Your Baby?
+                </div>
+                <div class="hadiv2">
+                    Table of Contents What to eat?Fenugreek seeds for breast milkShatavari powder for breast milkFinal thoughts Since the baby is completely reliant on the mother’s milk for the first six months of infancy, its benefits are said to last even beyond adulthood. Therefore, breastfeeding mothers are often cautious of the foods and liquids they take. Since 
+                </div>
+                <div class="hadiv3">
+                    Read More <span><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+            <div>
+                <img src="https://blog-images.pharmeasy.in/2022/03/25185321/negative-result.jpg?dim=0x230&dpr=1.25&q=100" alt="">
+                <div class="hadiv1">
+                    Missed Period? Here’s How You Can Take A Pregnancy Test At Home
+                </div>
+                <div class="hadiv2">
+                    Table of Contents Introduction6 Signs you should be taking a pregnancy testClinic or At-home: How to take a pregnancy test?1. Blood Test for Pregnancy2. Urine Pregnancy Test (UPT) – At home pregnancy testFinal Thoughts Introduction Once a woman is pregnant, she starts producing a particular hormone called human chorionic gonadotropin (hCG) that can be detected
+                </div>
+                <div class="hadiv3">
+                    Read More <span><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+            <div>
+                <img src="https://blog-images.pharmeasy.in/2022/03/25113023/bottle-feeding.jpg?dim=0x230&dpr=1.25&q=100" alt="">
+                <div class="hadiv1">
+                    Struggling To Feed Your Baby? Check Out Breast Breastfeeding Tips For New Mothers</div>
+                <div class="hadiv2">
+                    Table of Contents IntroductionBenefits of breastfeedingFor your baby​For youHow to breastfeed your baby?Latching problemsFinal Thoughts Introduction Only a mother can describe the euphoria in the smallest of pregnancy moments like hearing your baby’s heartbeat for the first time, experiencing that first kick or finally holding that little angel in your arms. According to a study</div>
+                <div class="hadiv3">
+                    Read More <span><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="images">
+        <div>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/4d2f7c48.svg">
+            <div>25 Million</div>
+            <div class="xlm">Registered Users as of Jun 30, 2021</div>
+        </div>
+        <div>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/92c372bb.svg">
+            <div>8.8 Million</div>
+            <div class="xlm">PharmEasy Orders as of FY21</div>
+        </div>
+        <div>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/773ae9c5.svg">
+            <div>50k+</div>
+            <div class="xlm">SKUs sold in Q1FY22</div>
+        </div>
+        <div>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/f2d557d3.svg">
+            <div>18k+</div>
+            <div class="xlm">Pin-Codes Serviced for the month of june 2021</div>
+        </div>
+    </div>
+
+    <div id="reviews">
+        <h2>What our customers have to say</h2>
+        <div id="reviewsbox">
+            <div>
+                <div class="name">Debanjan Roy</div>
+                <div class="date">April 18, 2020</div>
+                <div class="text">
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/d29d41d8.svg" alt="">
+                    <p>Excellent experience. Pharmeasy has not let it's customers down during lockdown. Thanks team. Great job. The application is also very smooth. And does its job well with an attractive UI and easy to use features. Good job developer.</p>
+                </div>
+            </div>
+            <div>
+                <div class="name">Darpan Dholkia</div>
+                <div class="date">April 23, 2020</div>
+                <div  class="text">
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/d29d41d8.svg" alt="">
+                    <p>Best service and app amongst all available. I have been using it for more than 3 years, and even during the pandemic, they have kept their standards high and are delivering the order within 24 hours. Keep up the good work.</p>
+                </div>
+            </div>
+            <div>
+                <div class="name">Mayur Sonagra</div>
+                <div class="date">April 23, 2020</div>
+                <div class="text">
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/d29d41d8.svg" alt="">
+                    <p>
+                        I've had a good experience. The consultation with a doctor feature works well too. The prices and discounts are great too. Overall the simplicity of the app is a plus too. I recommend this app. Will always be a customer/user now! Genuinely!</p>
+                </div>
+            </div>
+            <div>
+                <div class="name">Rohini Sarkar</div>
+                <div class="date">April 21, 2020</div>
+                <div  class="text">
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/d29d41d8.svg" alt="">
+                    <p>
+                        Very helpful and friendly app in terms of usability, customer support & money saving from the point of medical necessity of every person. I recommend    this app. I've had a good experience,    Will always be a customer/user now! Genuinely!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="posterbox">
+    <div id="poster">
+
+        <div id="posterdiv">
+            <div>Simplifying Healthcare, Impacting Lives</div>
+            <h2>Download the App for free</h2>
+            <div>
+                <img src="https://assets.pharmeasy.in/web-assets/dist/4e4f1cab.png" alt="">
+                <img src="https://assets.pharmeasy.in/web-assets/dist/83095c03.png" alt="">
+            </div>
+        </div>
+        <img src="https://assets.pharmeasy.in/web-assets/dist/1d1ccea7.jpg">
+    </div>
+    </div>
+    <div id="containerak">
+        <div>
+            <h3>Top-Selling Healthcare Products: </h3><span class="sp"> Accu-Chek Active - 100 Strips | Supradyn Multivitamin Tablets | DR Morepen BG 03 - 50 Strips | Dettol Antiseptic Liquid | Ensure Diabetes Care Vanilla Sugar Free Jar | Dettol Instant Hand Sanitizer | Everherb Shilajit | Softovac SF Powder | Pediasure Premium Chocolate Refill</span></div>
+        <div>
+            <h3>Top-Selling Medicines: </h3><span class="sp"> Dolovera Gel | Neurobion Forte | Chymoral Forte | Crocin Advance | Soframycin | Dexorange | Becadexamin | Folvite | Livogen | Becosules | Fourderm | Nurokind Plus | Burnol | Crocin 650 | Mintop 5 | Thrombophob | Evion 600 </span>
+        </div>
+        <div>
+            <h3>COVID-19 Preventatives: </h3><span class="sp">N95 Masks | Hand Sanitizers | Hand Gloves, Disinfectants, Thermometers & more!</span>
+        </div>
+        <div id="cobottom">
+            <h1>Your One-Stop Online Pharmacy - PharmEasy</h1>
+            <h2>We've got India Covered!</h2>
+            <p>
+                We now deliver in 1000+ cities and towns across 22000+ pin codes. We thereby cover every nook and corner of the country! The major cities in which we deliver include Mumbai, Kolkata, Delhi, Bengaluru, Ahmedabad, Hyderabad, Chennai, Thane, Howrah, Pune, Gurgaon, Navi Mumbai, Jaipur, Noida, Lucknow, Ghaziabad & Vadodara.</p>
+            <h2>Say Goodbye to All Your Healthcare Worries With PharmEasy!</h2>
+            <p>
+                PharmEasy is here to help you take it easy! We are amongst one of India's top online pharmacy and medical care platforms. It enables you to order pharmaceutical and healthcare products online  by connecting you to registered retail pharmacies and get them delivered to your home. We are an online medical store, making your purchase easy, simple, and affordable!
+            </p>
+            <h2>How Are We Making Lives Simpler With Our Online Medical Store?</h2>
+            <p>
+                Our doorstep delivery service is available in PAN-India across top cities like Bangalore, Delhi, Mumbai, Kolkata, Hyderabad, Gurgaon, Noida, Pune, etc. Our online medical store also allows you to choose from 1 lakh+ products incl. OTC products and medical equipment. PharmEasy is a one-stop online medical platform where you can also book  diagnostic tests  including blood tests, full-body checkups, and other preventive health check-ups at an affordable cost, right from the comfort of your home. We have partnered with trusted & amp; certified labs that arrange for a sample pick-up from the convenience of your home. They also provide you with timely reports.</p>
+            <h2>Why Are We The Most Preferred Online Pharmacy?</h2>
+            <p>
+                Lucrative offers on our platform allow you to make payment online and via various payment wallets at a discounted price. Alternatively, you can also choose to pay cash on delivery as we deliver the products at your doorstep. We cater to all your pharmaceutical needs and also make  ordering medicines online  a hassle-free experience for you. We connect you only with registered retail pharmacies & certified diagnostic labs. We ensure that healthcare is affordable to all and make the process of ordering online simple.</p>
+            <h2>Sit Back & Relax While You Get Your Essentials Delivered Every Month!</h2>
+            <p>
+                It’s tough to remember to refill every month, especially in the case of chronic diseases. PharmEasy’s subscription service not only ensures that you are reminded of your refills but also makes sure that you are never out on your medical essentials. You will get a reminder every month and your order will be delivered at your convenience!</p>
+                <h2>Access medical and health information:</h2>
+                <p>PharmEasy delivers reliable and accurate medical information that has been carefully written, vetted and validated by our health experts. Our specialists curate high-quality and most reliable literature about medicines, illnesses, lab tests, Ayurvedic and over the counter health products.</p>
+                <h2>We Believe in ‘Simplifying Healthcare, Impacting Lives!’</h2>
+    
+        </div>
+    </div>
+   <div id="footer">
+       <div id="footertext">
+           <div>
+               <h3>Company</h3>
+               <p>About Us</p>
+               <p>Careers</p>
+               <p>Blog</p>
+               <p>Partner with PharmEasy</p>
+               <p>Sell at PharmEasy</p>
+               <h3>Our Services</h3>
+               <p>Order Medicine</p>
+               <p>Healthcare Products</p>
+               <p>Lab Tests</p>
+           </div>
+           <div>
+               <h3>Featured Categories</h3>
+               <p>Personal Care</p>
+               <p>Health Food and Drinks</p>
+               <p>Skin Care</p>
+               <p>Home Care</p>
+               <p>Ayurvedic Care</p>
+               <p>Sexual Wellness</p>
+               <p>Fitness & Supplements</p>
+               <p>Mother and Baby Care</p>
+               <p>Healthcare Devices</p>
+               <p>Surgicals and Dressings</p>
+               <p>Covid Essentials</p>
+               <p>Health Condition</p>
+               <p>Diabetic Care</p>
+               <p>Elderly Care</p>
+               <p>Accessories And Wearables</p>
+               <p>Pet Care</p>
+           </div>
+           <div>
+               <h3>Need help</h3>
+               <p>Browse All Medicines</p>
+               <p>Browse All Molecules</p>
+               <p>Browse All Cities & Areas</p>
+               <p>FAQs</p>
+               <h3>Policy Info</h3>
+               <p>Editorial Policy</p>
+               <p>Privacy Policy</p>
+               <p>Vulnerability Disclosure Policy</p>
+               <p>Terms and Conditions</p>
+               <p>Customer Support Policy</p>
+               <p>Return Policy</p>
+           </div>
+           <div>
+               <h3>FOLLOW US</h3>
+               <div  id="follow">
+                <span style="padding-right: 15px"><i class="fa-brands fa-instagram-square fa-2x"></i></span>
+                <span style="padding-right: 15px"><i class="fa-brands fa-facebook fa-2x"></i></span>
+                <span style="padding-right: 15px"><i class="fa-brands fa-youtube-square fa-2x"></i></span>
+                <span style="padding-right: 15px"><i class="fa-brands fa-twitter-square fa-2x"></i></span>
+               </div>
+           </div>
+       </div>
+       <div id="partnersheading">
+        <h3>Our Payment Partners</h3>
+        <div id="partners">
+           <div> <img src="https://assets.pharmeasy.in/web-assets/dist/af0c6812.svg" alt=""> </div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/0e010044.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/1066bb1f.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/3a1a533d.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/fbea1701.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/4733a49d.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/b278e536.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/0aca2077.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/44a51ca5.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/d058b00d.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/e9445364.svg" alt=""></div>
+           <div><img src="https://assets.pharmeasy.in/web-assets/dist/6e09c713.svg" alt=""></div>
+       </div>
+       
+       </div>
+   </div>
+</body>
+</html>
+<script>
+    var counter = 1;
+    setInterval(function(){
+        document.getElementById("radio"+counter).checked = true;
+        counter++
+        if(counter>6){
+            counter=1
+        }
+    },5000)
+document.querySelector("#cont2").addEventListener("click", hafunction2)
+
+function hafunction2(){
+    window.location.href="healthcarePage.html"
+}
+
+document.querySelector("#cont3").addEventListener("click" , ltfunction12)
+function ltfunction12(){
+    window.location.href="labtest.html"
+}
+
+document.querySelector("#cont1").addEventListener("click" , omfunction1)
+function omfunction1(){
+    window.location.href="product.html"
+}
+</script>
+<script>
+    function realtimeClock(){
+    var rtClock = new Date();
+
+    var hours = rtClock.getHours();
+    var minutes = rtClock.getMinutes();
+    var seconds = rtClock.getSeconds();
+
+
+    var amPm = ( hours < 12) ? "AM" : "PM";
+
+
+    hours = (hours > 12) ? hours - 12 : hours;
+
+    hours = ("0" + hours).slice(-2);
+    minutes = ("0" + minutes).slice(-2);
+    seconds = ("0" + seconds).slice(-2);
+
+    document.querySelector("#clock").innerHTML = 
+    hours + " : " + minutes+ " : " +seconds+ " " + "hours left";
+    var t = setTimeout(realtimeClock, 500);
+
+}
+</script>
+<script>
+     var offers = [
+        { image: "https://cms-contents.pharmeasy.in/offer/f8bf7f78e45-25100.jpg?dim=60x0&dpr=1.25&q=100", descrip: "Get flat Rs.250 cashback on ICICI Debit & Credit cards", code: "Code: GRAND25" },
+        { image: "https://cms-contents.pharmeasy.in/offer/4db0adda6b1-40.jpg?dim=60x0&dpr=1.25&q=100", descrip: "Flat 20% off + 20% cashback on your 1st medicine order", code: "Code: PHEA20" },
+        { image: "https://cms-contents.pharmeasy.in/offer/6901b462e6d-icicinew.jpg?dim=60x0&dpr=1.25&q=100", descrip: "Get flat Rs.250 cashback on ICICI Debit & Credit cards", code: "No Code Required" },
+        { image: "https://cms-contents.pharmeasy.in/offer/8500c9729db-logo_PhonePe_PhonePe.png?dim=60x0&dpr=1.25&q=100", descrip: "Get up to Rs.750 cashback via PhonePe wallet only.", code: "No Code Required" },
+    ]
+    offers.map(function (elem) {
+        var div1 = document.createElement("div");
+        var div2 = document.createElement("div");
+        var div3 = document.createElement("div");
+        var div4 = document.createElement("div");
+        var des = document.createElement("div")
+        des.setAttribute("id","de");
+        var image = document.createElement("img");
+        image.src = elem.image;
+        var descrip = document.createElement("h6");
+        descrip.textContent = elem.descrip;
+        descrip.setAttribute("id","h6HP");
+        var code = document.createElement("h5");
+        code.textContent = elem.code;
+        code.setAttribute("id","h5HP");
+        div2.append(image)
+        des.append(descrip,code)
+        div1.append(div2, des)
+        document.querySelector("#conthp").append(div1);
+    })
+</script>
+
+<script>
+    var feature=[
+    {image:"https://cms-contents.pharmeasy.in/carousel_item/fffbe044dc3-web_Baidynath.jpg?dim=146x0&dpr=1.25&q=100"},
+    {image:"https://cms-contents.pharmeasy.in/carousel_item/fd17e547883-Horlicks_web.jpg?dim=146x0&dpr=1.25&q=100"},
+    {image:"https://cms-contents.pharmeasy.in/carousel_item/a2ec4d896ba-Web_Featured-Vicks.jpg?dim=146x0&dpr=1.25&q=100"},
+    {image:"https://cms-contents.pharmeasy.in/carousel_item/c572570b5ce-Liveasy.jpg?dim=146x0&dpr=1.25&q=100"},
+    {image:"https://cms-contents.pharmeasy.in/carousel_item/2d987111a15-Featured-banner_Revital.png?dim=146x0&dpr=1.25&q=100"},
+    {image:"https://cms-contents.pharmeasy.in/carousel_item/ac01791d842-Featured-banner_Volini.png?dim=146x0&dpr=1.25&q=100"},
+    {image:"https://cms-contents.pharmeasy.in/carousel_item/487644e2f83-Nivea_web.jpg?dim=146x0&dpr=1.25&q=100"},
+    {image:"https://cms-contents.pharmeasy.in/carousel_item/fdcad76ed48-WEB_Bournvita.jpg?dim=146x0&dpr=1.25&q=100"},
+]
+feature.map(function(elem){
+    var div2=document.createElement("div");
+    var anchor=document.createElement("a");
+    var  image=document.createElement("img");
+    image.src = elem.image;
+    anchor.append(image)
+    div2.append(anchor);
+    document.querySelector("#conhsp").append(div2);
+})
+</script>
+
+<script>
+    document.querySelector(".green").addEventListener("click", viewFunc);
+
+
+var headname=document.querySelector("#viewmore") || []
+headname.style.maxWidth="0px"
+// how " " in quotes value result 
+
+function viewFunc(){
+  var stopscroll = document.querySelector(".stopscroll");
+    stopscroll.style.height="100%";
+    stopscroll.style.overflow="hidden";
+    var count = 0;
+
+    if(headname.style.maxWidth=="0px"){
+        headname.style.maxWidth="1200px"
+        count++;
+    }
+    else{
+        headname.style.maxWidth="0px"
+    }
+    if(count==0){
+      closeButton(headname);
+      
+    }
+    
+}
+document.querySelector(".close").addEventListener("click", closeButton);
+function closeButton(){
+var stopscroll = document.querySelector(".stopscroll");
+    stopscroll.style.height="100%";
+    stopscroll.style.overflow="scroll";
+
+if(headname.style.maxWidth=="1200px"){
+  headname.style.maxWidth="0px"
+}else{
+  headname.style.maxWidth="0px"
+}
+
+}
+
+
+// document.querySelector("#signupForm").addEventListener("submit", signupFunction);
+
+// var signCred = JSON.parse(localStorage.getItem("signupCred")) || [];
+
+// function signupFunction(){
+//     event.preventDefault();
+
+//     var obj = {
+//         phone: document.querySelector("#phone").value,
+//         otp: document.querySelector("#otp").value
+//     };
+//     // signCred.push(obj);
+//     // console.log(signCred);
+//     // localStorage.setItem("signupCred", JSON.stringify(signCred));
+  
+
+//     // document.querySelector(".view").append(btn);
+
+// }
+
+function signupFun(){
+event.preventDefault();
+
+var obj = {
+    phone: document.querySelector("#phone").value,
+    otp: document.querySelector("#otp").value
+};
+if (Number(obj.otp) == 1234){
+    document.querySelector(".green").innerHTML="User"
+//   window.location.href = "index.html";
+ 
+     alert("Login Sucessfully !!!")
+  
+}
+else{
+  alert("Please enter OTP: 1234");
+}
+}
+
+
+
+
+</script>
