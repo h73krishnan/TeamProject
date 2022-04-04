@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmEasy:Online Pharmacy & Medicine</title>
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+            *{
+    font-family: "Open Sans", sans-serif;
+}
+        #headerbox{
+    background: #10847e;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
+    user-select: none;
+    padding: 15px 0;
+    transition: all .3s;
+}
+
+#headerbox>div{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    /* border: 1px solid yellow; */
+    height: 90%;
+    justify-content: space-evenly;
+}
+#headerbox>div>a{
+    margin-right: 50px;
+    margin-left: 60px;
+}
+
+#headerbox>div>a img{
+    width: 180px;
+    height: 50px;
+}
+#headerbox>div>div{
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid pink; */
+}
+
+.headdiv{
+    height: 100%;
+    width: 100%;
+}
+.headdiv>div:first-child{
+    /* border: 1px solid red; */
+    height: 60%;
+    margin-bottom: 15px;
+}
+.headdiv>div:last-child{
+    /* border: 1px solid blue; */
+    height:40%
+}
+#serchboxes{
+    display: flex;
+    /* border: 1px solid yellow; */
+}
+
+#serchboxes>div{
+    display: flex;
+    width: 800px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#serchboxes>div>div:first-child{
+    margin-left: 20px;
+    color: #139992;
+    font-weight: 700;
+}
+
+#serchboxes>div>div:nth-child(2){
+    color: gray;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-left: 1px solid gray;
+}
+
+#btmpart{
+    width: 100%;
+    height: 40%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+}
+.headdiv a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+#btmpart>div:first-child{
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+    margin-left: -20px;
+}
+#btmpart>div:first-child a:hover{
+    border-bottom: 2px solid white;
+}
+#btmpart>div:last-child div:hover{
+    border-bottom: 2px solid white;
+}
+#btmpart>div:last-child{
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+
+    margin-left: 5px;
+    justify-content: space-around;
+    color: white;
+}
+
+#smily{
+    margin-top: 300px;
+    margin-left: 400px;
+    width: 50%;
+    height: auto;
+    /* border: 1px solid black; */
+
+}
+
+h1{
+ 
+    font-size: 60px;
+    color: green;
+    margin-left: 80px;
+}
+#smily #sspan{
+    height: 100px;
+    width:100px
+}
+</style>
+</head>
+<body>
+    <div id="headerbox">
+        <div>
+            <a href="index.html">
+                <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+            </a>
+            <div class="headdiv">
+                <div id="serchboxes">
+                    <div> 
+                        <div>Select Pincode <span><i class="fa-solid fa-caret-down"></i></span></div>
+                        <div>
+                            Search medicines/Healthcare products @18% Off</div>
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="btmpart">
+                    <div>
+                        <div>
+                            <a href="product.html">Order Medicines</a>
+                        </div>
+                        <div>
+                            <a href="healthcarePage.html">Healthcare Products</a>
+                        </div>
+                        <div>
+                            <a href="labtest.html">Lab Tests</a>
+                        </div>
+                      
+                    </div>
+                    <div>
+                        <!-- <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><a href="">Offers</a></div> -->
+                        <div>
+                            <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""><a href="">User</a>
+                        </div>
+                        <div>
+                            <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">
+                            <a href="checkout.html">Cart</a>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+    
+        </div>
+    </div>
+
+
+    <div id="smily">
+
+        <h1>Order Sucessfull !!!</h1>
+
+    </div>
+</body>
+</html>

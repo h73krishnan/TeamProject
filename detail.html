@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PharmEasy:Online Pharmacy & Medicine</title>
+    <link rel="stylesheet" href="cart.css">
+
+    <style>
+         *{
+    font-family: "Open Sans", sans-serif;
+}
+
+#headerbox{
+    background: #10847e;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
+    user-select: none;
+    padding: 15px 0;
+    transition: all .3s;
+}
+
+#headerbox>div{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    /* border: 1px solid yellow; */
+    height: 90%;
+    justify-content: space-evenly;
+}
+#headerbox>div>a{
+    margin-right: 50px;
+    margin-left: 60px;
+}
+
+#headerbox>div>a img{
+    width: 180px;
+    height: 50px;
+}
+#headerbox>div>div{
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid pink; */
+}
+
+.headdiv{
+    height: 100%;
+    width: 100%;
+}
+.headdiv>div:first-child{
+    /* border: 1px solid red; */
+    height: 60%;
+    margin-bottom: 15px;
+}
+.headdiv>div:last-child{
+    /* border: 1px solid blue; */
+    height:40%
+}
+#serchboxes{
+    display: flex;
+    /* border: 1px solid yellow; */
+}
+
+#serchboxes>div{
+    display: flex;
+    width: 800px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#serchboxes>div>div:first-child{
+    margin-left: 20px;
+    color: #139992;
+    font-weight: 700;
+}
+
+#serchboxes>div>div:nth-child(2){
+    color: gray;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-left: 1px solid gray;
+}
+
+#btmpart{
+    width: 100%;
+    height: 40%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+}
+.headdiv a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+#btmpart>div:first-child{
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+    margin-left: -20px;
+}
+#btmpart>div:first-child a:hover{
+    border-bottom: 2px solid white;
+}
+#btmpart>div:last-child div:hover{
+    border-bottom: 2px solid white;
+}
+#btmpart>div:last-child{
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+
+    margin-left: 5px;
+    justify-content: space-around;
+    color: white;
+}
+          #containerHK{
+            height: 250px;
+            width: 70%;
+            display: flex;
+
+            margin-left: 150px;
+            margin-top: 200px;
+
+          }
+          .boks{
+            height: 100%;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border-radius: 10px;
+          }
+          .boks1{
+            height: 100%;
+            width: 60%;
+            margin-left: 20px;
+          }
+          .boks>img{
+            height: 170px;
+            width: 170px;
+            margin-left: 45px;
+            margin-top: 35px;
+          }
+          .starimg{
+            height: 50px;
+            width: 150px;
+            margin-top: -5px;
+            margin-left: -10px;
+          }
+          h4{
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 20px;
+            line-height: 25px;
+            color: #4f585e; 
+          }
+          h5{
+            margin-top: 55px;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 20px;
+            line-height: 25px;
+            color: #4f585e; 
+          }
+          .visit{
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 400px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #10847e; 
+            margin-top: -65px;
+          }
+          .mrps{
+            margin-top: -55px;
+            margin-left: 70px;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 400px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #4f585e;
+          }
+          .stps{
+            margin-top: -32px;
+            margin-left: 107px;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 400px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #4f585e;
+            text-decoration: line-through;
+          }
+          .pinktag{
+            /* margin-top: -50px; */
+            margin-left: 150px;
+            /* padding-top: -50px;
+            box-sizing: border-box; */
+          }
+          .persoff{
+            margin-left: 155px;
+            margin-top: -20px;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 10px;
+            line-height: 13px;
+            color: white;
+            
+            
+          }
+          button{
+            height: 40px;
+            width: 200px ;
+            margin-left: 350px;
+            background-color: #10847e;
+            border: none;
+            color: white;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700px;
+            font-size: 20px;
+            line-height: 25px;
+            border-radius: 10px;
+            /* padding: 15px 50px 30px 15px;
+            box-sizing: border-box; */
+          }
+          .taxword{
+            margin-top: -70px;
+            font-family: sans-serif;
+            font-style: normal;
+            color: #4f585e;
+          }
+
+          #footer{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid black; */
+        background-color: #f4f7fb;
+        margin-top: 20px;   
+        padding: 10px;
+        
+    }
+
+    #footertext{
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin: auto;
+        /* border: 1px solid blue; */
+        justify-content: space-between;
+        flex-flow: row wrap;
+        margin-bottom: 140px;
+    
+        /* flex-direction: column; */
+    }
+    #footertext>div{
+        width: 22%;
+        height: auto;
+        /* border: 1px solid greenyellow; */
+        line-height: 15px;
+        color: rgb(104, 103, 103);
+        cursor: pointer;
+        
+    }
+    #partners{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin: auto;
+        cursor: pointer;
+    }
+    #follow{
+        display: flex;
+       
+     }
+    #follow>div{
+        margin: auto;
+    }
+    #follow i{
+        color: #356361;
+    }
+    #follow h3{
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #follow p{
+        font-size: 10px;
+        cursor: pointer;
+    }
+    #partners{
+        display: flex;
+    }
+    #partners img{
+        width: 40px;
+        height:30px;
+        margin-right: 15px;
+    }
+    #partnersheading{
+        width: 90%;
+        margin: auto;
+        /* border: 1px solid green; */
+    }
+    #partnersheading>h3{
+        color: #454c52;
+    }
+          /* ak  */
+          #sminfobox{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    /* border: 1px solid black; */
+}
+#sminfobox>div{
+    margin: auto;
+    /* border: 1px solid red; */
+}
+h2{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #686a6b;
+}
+span{
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 25px;
+    color: #677a89;
+}
+div>ul>li{
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 35px;
+    color:#677a89;
+    padding-left: 10px;
+}
+ul{
+    list-style: none;
+}
+ul li::before{
+    content: "\2022";
+    color: #3bb899;
+    display: inline-block;
+    width: 20px;
+    margin-left: -40px;
+
+}
+/* summit  */
+#scontainer{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    justify-content: space-around;
+  
+}
+#sli{
+    list-style-type: none;
+    line-height: 35px;
+    font-family: sans-serif;
+    cursor: pointer;
+    color:#6b7982;
+}
+#sh3{
+    font-family: sans-serif;
+    color: #4f585E;
+}
+#spay{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 85%;
+    padding-bottom: 30px;
+}
+#simg{
+    height: 30px;
+    width: 40px;
+    padding: 15px 15px 0px 0px;
+    margin: auto;
+}
+#spartners>#spartnersh3{
+    width: 85%;
+    display: flex;
+    margin: auto;
+    padding-top: 30px;
+    font-family: sans-serif;
+    color: #4f585e;
+}
+#ssymbol>#sspan{
+  color: teal;
+  /* gap: 30%; */
+  cursor: pointer;
+}
+#player{
+    background-color: #f4f7fb;
+    padding-top: 50px;
+    /* margin-top: 50px; */
+}
+
+
+#smcontainer{
+    margin: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    height: 270px;
+    width: 800px;
+    margin-top: 70px;
+    padding-bottom: 50px;
+
+}
+#smcontainer>#smdiv{
+    /* border: 1px solid red; */
+    /* display: flex; */
+    width: 25%;
+    margin: auto;
+    /* align-items: center; */
+    height: 300px;
+}
+#smcontainer>#smdiv>#smimg{
+    width: 50px;
+    height: 50px;
+    margin-left: 0px;
+}
+#smp{
+    line-height: 25px;
+    font-family: sans-serif;
+    color: #8897a2;
+}
+#smh3{
+    font-family: sans-serif;
+    color: #4f585E;
+}
+#smbox{
+    height: 600px;
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 20px;
+    margin-right: 100px;
+}
+#smboximg{
+    width: 210px;
+    height: 420px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+#smbox2{
+    height: 400px;
+    width: 50%;
+    /* border: 1px solid red; */
+    margin-top: 50px;
+    /* display: flex; */
+}
+#smnamebox{
+    height: 50px;
+    width: 600px;
+    /* border: 1px solid black; */
+    /* padding: 15px; */
+    padding-left: 100px;
+}
+#smnamebox>#smnameboxh3{
+    font-family: sans-serif;
+    color: rgb(94, 92, 92);
+    font-weight: normal;
+    
+}
+#smoptbox
+{
+    height: 90px;
+    width: 600px;
+    /* border: 1px solid turquoise; */
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    padding-left: 100px;
+
+}
+#smoptbox>#smopt1
+{
+    height:40px;
+    width: 170px;
+    /* border: 1px solid blue; */
+    gap: 15px;
+    background-color: #586166;
+    color: beige;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-top: -20px;
+}
+#smoptbox>#smopt1:hover{
+    background-color: rgb(44, 40, 40);
+    cursor: pointer;
+}
+#smopt1{
+    padding-top: 15px;
+    display: flex;
+}
+#smopt1>#smspan{
+    height: 10px;
+    width: 10px;
+}
+#smopt1>#smoptp{
+    color: black;
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    color: white;
+}
+#smspan{
+    color: white;
+    margin-bottom: -20px;
+    padding-bottom: 10px;
+}
+
+    </style>
+</head>
+
+<body>
+  <div id="headerbox">
+    <div>
+        <a href="index.html">
+            <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+        </a>
+        <div class="headdiv">
+            <div id="serchboxes">
+                <div> 
+                    <div>Select Pincode <span><i class="fa-solid fa-caret-down"></i></span></div>
+                    <div>
+                        Search medicines/Healthcare products @18% Off</div>
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="btmpart">
+                <div>
+                    <div>
+                        <a href="product.html">Order Medicines</a>
+                    </div>
+                    <div>
+                        <a href="healthcarePage.html">Healthcare Products</a>
+                    </div>
+                    <div>
+                        <a href="labtest.html">Lab Tests</a>
+                    </div>
+                  
+                </div>
+                <div>
+                    <!-- <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><a href="">Offers</a></div> -->
+                    <div>
+                        <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""><a href="">User</a>
+                    </div>
+                    <div>
+                        <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">
+                        <a href="checkout.html">Cart</a>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+    </div>
+</div>
+ 
+    <!-- <h1>Personal care</h1> -->
+    <!-- <div id="nextLine"> -->
+    <div id="containerHK"></div>
+    <!-- </div> -->
+    
+    <div id="sminfobox">
+      <div>
+          <h2>Shop Safely And Worry-Free On PharmEasy</h2>
+          <span>PharmEasy is a renowned name in the online shopping of Over The Counter or healthcare products and other daily essentials. Ordering online on PharmEasy is convenient, fast and hassle-free; you can avoid the annoyance of queuing up at your local pharmacy and also avail of huge discounts of up to 80% OFF. Purchasing the healthcare requirements such as medical devices and nutritional supplements that you need will no longer burn a hole in your pocket. At PharmEasy, you are sure to find everything that you need because we have products across all healthcare categories.</span>
+      </div>
+      <div>
+          <h2>Why choose PharmEasy?</h2>
+          <ul>
+              <li>8400+ Brands</li>
+              <li>35K products in our stock</li>
+              <li>Delivery to 22000+ pin codes</li>
+              <li>Delivered to 50 lakh+ families</li>
+              <li>Over 2M customers served</li>
+          </ul>
+      </div>
+      <div>
+          <h2>Our most popular categories:</h2>
+          <span>We have a range of categories and products, some which are:</span>
+      </div>
+      <div>
+          <h2>Devices</h2>
+          <span>With the pandemic upending our lives, we have all realized that there are some medical devices that we need to keep in our homes such as Oximeter, Thermometer, Inhaler, Blood pressure monitor, Glucometer.</span>
+      </div>
+      <div>
+          <h2>Personal care</h2>
+          <span>Personal care products can include a wide range of products such as Bath products, , Skincare essentials, Razor blades, Toothpaste and toothbrush, Wet wipes, Lip balm, Face masks, Hand sanitizer, etc.
+          </span>
+      </div>
+      <div>
+          <h2>Nutrition and fitness supplements
+          </h2>
+          <span>To give your health a helping hand, you can order a wide variety of health supplements including Health drinks, Nutritional powder, Nutrition tablets/capsules.
+          </span>
+      </div>
+      <div>
+          <h2>Ayurvedic care
+          </h2>
+          <span>Place your trust in the goodness of natural and organic ayurvedic products for an all-around healthy mind and body. There’s plenty to choose from such as Aloe vera juice, Moringa capsules, Garlic capsules.
+          </span>
+      </div>
+      <div>
+          <h2>Home care
+          </h2>
+          <span>Home care products are things you need every day such as disinfectant spray, phenyl, dishwashing liquid, etc. Get them all at spectacular discounts on PharmEasy.
+          </span>
+      </div>
+      <div>
+          <h2>Baby and mom care
+          </h2>
+          <span>PharmEasy also has an impressive range of baby and mom care products including Diapers, Baby bath products, Infant formula food, Mother’s health drinks, Diaper rash creams, Baby wipes.
+          </span>
+      </div>
+      <div>
+          <h2>Our top brands:
+          </h2>
+          <span>Get products from the most famous and trusted brands including Accu-chek, Dettol, Horlicks, Baidyanath, Sebamed.
+          </span>
+      </div>
+      <div>
+          <h2>You are safe with PharmEasy:
+          </h2>
+          <span>Given the times, we are taking all precautions to ensure that we keep everyone safe - our customers and the people we work with.
+          </span>
+      </div>
+      <div>
+          <h2>We ensure
+          </h2>
+          <ul>
+              <li>Regular sanitization of our premises and warehouses
+              </li>
+              <li>Temperature checks of our employees and delivery partners
+              </li>
+              <li>No-contact door-step delivery
+              </li>
+              <li>Sanitized packaging
+              </li>
+          </ul>
+      </div>
+      <div>
+          <h2>Youe safety is our priority
+          </h2>
+          <span>Stay safe at home and shop at your convenience from PharmEasy. All you have to do is place your order and we will try to deliver it at the earliest.
+          </span>
+      </div>
+    </div>
+    <!-- sumeet  -->
+    <hr>
+    <div id="smcontainer">
+    <div id="smdiv">
+    <img id="smimg" src="https://pharmeasy.in/_next/image?url=%2Ficons%2FgenuineMedicine.svg&w=64&q=75"/>
+    <h3 id="smh3">1 Lakh+ Products</h3>
+    <p id="smp">We maintain strict quality controls on all our partner retailers, so that you always get standard quality products.</p>
+    </div>
+    <div id="smdiv">
+    <img id="smimg" src="https://pharmeasy.in/_next/image?url=%2Ficons%2FsecurePayment.svg&w=64&q=75"/>
+    <h3 id="smh3">Secure Payment</h3>
+    <p id="smp">100% secure and trusted payment protection</p>
+    </div>
+    <div id="smdiv">
+    <img id="smimg" src="https://pharmeasy.in/_next/image?url=%2Ficons%2FeasyReturn.svg&w=64&q=75"/>
+    <h3 id="smh3">Easy Return</h3>
+    <p id="smp">We have a new and dynamic return window policy for medicines and healthcare items. Refer FAQs section for more details.</p>
+    </div>
+    </div>
+    <hr>
+    
+    <div id="smbox">
+    <div><img id="smboximg" src="https://assets.pharmeasy.in/web-assets/dist/34a16ae8.jpg"/></div>
+    <div id="smbox2">
+    <div id="smnamebox"><h3 id="smnameboxh3">Download the App for Free</h3>
+    </div>
+    <div id="smoptbox">
+      <div id="smopt1"><span id="smspan"><i class="fa-brands fa-google-play fa-2x"></i></span><p id="smoptp">Google Pay</p></div>
+      <div id="smopt1"><span id="smspan"><i class="fa-brands fa-apple fa-2x"></i></span><p id="smoptp">App Store</p></div>
+    </div>
+    </div>
+    </div>
+    
+    <!-- akk  -->
+    
+    
+    
+        <div id="footer">
+          <div id="footertext">
+              <div>
+                  <h3>Company</h3>
+                  <p>About Us</p>
+                  <p>Careers</p>
+                  <p>Blog</p>
+                  <p>Partner with PharmEasy</p>
+                  <p>Sell at PharmEasy</p>
+                  <h3>Our Services</h3>
+                  <p>Order Medicine</p>
+                  <p>Healthcare Products</p>
+                  <p>Lab Tests</p>
+              </div>
+              <div>
+                  <h3>Featured Categories</h3>
+                  <p>Personal Care</p>
+                  <p>Health Food and Drinks</p>
+                  <p>Skin Care</p>
+                  <p>Home Care</p>
+                  <p>Ayurvedic Care</p>
+                  <p>Sexual Wellness</p>
+                  <p>Fitness & Supplements</p>
+                  <p>Mother and Baby Care</p>
+                  <p>Healthcare Devices</p>
+                  <p>Surgicals and Dressings</p>
+                  <p>Covid Essentials</p>
+                  <p>Health Condition</p>
+                  <p>Diabetic Care</p>
+                  <p>Elderly Care</p>
+                  <p>Accessories And Wearables</p>
+                  <p>Pet Care</p>
+              </div>
+              <div>
+                  <h3>Need help</h3>
+                  <p>Browse All Medicines</p>
+                  <p>Browse All Molecules</p>
+                  <p>Browse All Cities & Areas</p>
+                  <p>FAQs</p>
+                  <h3>Policy Info</h3>
+                  <p>Editorial Policy</p>
+                  <p>Privacy Policy</p>
+                  <p>Vulnerability Disclosure Policy</p>
+                  <p>Terms and Conditions</p>
+                  <p>Customer Support Policy</p>
+                  <p>Return Policy</p>
+              </div>
+              <div>
+                  <h3>FOLLOW US</h3>
+                  <div  id="follow">
+                   <span style="padding-right: 15px"><i class="fa-brands fa-instagram-square fa-2x"></i></span>
+                   <span style="padding-right: 15px"><i class="fa-brands fa-facebook fa-2x"></i></span>
+                   <span style="padding-right: 15px"><i class="fa-brands fa-youtube-square fa-2x"></i></span>
+                   <span style="padding-right: 15px"><i class="fa-brands fa-twitter-square fa-2x"></i></span>
+                  </div>
+              </div>
+          </div>
+          <div id="partnersheading">
+           <h3>Our Payment Partners</h3>
+           <div id="partners">
+              <div> <img src="https://assets.pharmeasy.in/web-assets/dist/af0c6812.svg" alt=""> </div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/0e010044.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/1066bb1f.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/3a1a533d.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/fbea1701.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/4733a49d.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/b278e536.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/0aca2077.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/44a51ca5.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/d058b00d.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/e9445364.svg" alt=""></div>
+              <div><img src="https://assets.pharmeasy.in/web-assets/dist/6e09c713.svg" alt=""></div>
+          </div>
+          
+          </div>
+      </div>
+  </body>
+</html>
+
+<script>
+//  var pCareData = [
+//       { image:"https://pharmeasy.in/_next/image?url=https%3A%2F%2Fcdn01.pharmeasy.in%2Fdam%2Fproducts_otc%2FT70695%2Fsupradyn-daily-multivitamin-tablets-15s-1-1641793954.jpg&w=256&q=75",
+//       name:"Supradyn Daily Muultivitamin Tablets 15s",
+//       mrp : "MRP",
+//       stprice : "₹50.00",
+//       offimg : "https://assets.pharmeasy.in/web-assets/_next/static/media/pdp-discount.3be9b0b7b6df33237af63e00f8e4de02.png",
+//       price: "₹47.50",
+//       per : "5% OFF",
+//       brand: "23 Yards",
+      
+      
+//       },  
+
+//       { image:"https://pharmeasy.in/_next/image?url=https%3A%2F%2Fcdn01.pharmeasy.in%2Fdam%2Fproducts_otc%2FT70695%2Fsupradyn-daily-multivitamin-tablets-15s-1-1641793954.jpg&w=256&q=75",
+//       name:"Supradyn Daily Muultivitamin Tablets 15s",
+//       mrp : "MRP",
+//       stprice : "₹50.00",
+//       offimg : "https://assets.pharmeasy.in/web-assets/_next/static/media/pdp-discount.3be9b0b7b6df33237af63e00f8e4de02.png",
+//       price: "₹47.50",
+//       per : "5% OFF",
+//       brand: "23 Yards",
+//       },  
+     
+   
+    
+//   ];
+
+  var pCareData = JSON.parse(localStorage.getItem("detailData"));
+  console.log(pCareData);
+
+  var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  
+//  pCareData.map(function (pCareData) {
+    var box = document.createElement("div");
+      box.setAttribute("class", "boks");
+
+    var img = document.createElement("img");
+    img.src = pCareData.image;
+
+
+    var box1 = document.createElement("div");
+    box1.setAttribute("class", "boks1");
+
+    var name = document.createElement("h4");
+    name.textContent = pCareData.name;
+
+    var visit = document.createElement("p"); 
+     visit.innerText="Visit CALCIMAX store";
+     visit.setAttribute("class", "visit");
+
+    var img2 = document.createElement("img");
+    img2.src = "data:image/png;base64,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";
+    img2.setAttribute("class", "starimg"); 
+
+    var price = document.createElement("h5");
+    price.innerText = pCareData.price;
+
+    var mrp = document.createElement("p");
+    mrp.innerText = pCareData.mrp;
+    mrp.setAttribute("class","mrps");
+
+    var stprice = document.createElement("p");
+    stprice.innerText = pCareData.stprice;
+    stprice.setAttribute("class","stps");
+
+    var per = document.createElement("p");
+    per.innerText = pCareData.per;
+    per.setAttribute("class","persoff");
+
+    var img3 = document.createElement("img");
+    img3.src = pCareData.offimg;
+    img3.setAttribute("class","pinktag");
+
+    var tax = document.createElement("p"); 
+     tax.innerText="Inclusive of all taxes";
+     tax.setAttribute("class", "taxword")
+
+    var a = document.createElement("a");
+    a.href = "checkout.html";
+
+    var br = document.createElement("br")
+
+    var btn = document.createElement("button");
+    btn.innerText = "Add to cart";
+    a.append(btn);
+
+    a.addEventListener("click", function () {
+      addToCart(pCareData);
+      console.log(pCareData);
+    });
+
+    box.append(img);
+    box1.append(name,img2,visit,  price, mrp, stprice, img3,per,a, tax)
+     
+    var cont = document.querySelector("#containerHK").append(box,box1,br);
+    // document.querySelector("#nextLine").append(cont);
+  // });
+
+  function addToCart(pCareData) {
+    console.log(pCareData);
+    cartData.push(pCareData);
+    localStorage.setItem("cart", JSON.stringify(cartData));
+    window.location.href="chekout.html";
+    // alert("item added to cart");
+  }
+</script>
